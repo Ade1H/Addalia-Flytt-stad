@@ -1,33 +1,37 @@
 import React, { useState, useEffect } from "react";
-import Carousel from "react-bootstrap/Carousel";
 import axios from "axios";
+import Carousel from "react-bootstrap/Carousel";
 
 const ReviewsCarousel = () => {
   const [reviews, setReviews] = useState([]);
   const [error, setError] = useState("");
 
+  // Define your Google API key and place ID here
+  const apiKey = "AIzaSyCvNudw6jnl9DK7XOLbwLLZarFCVBUz_uw";  // Replace with your API key
+  const placeId = "YChIJK-rgahjzT0YRmf7gYsIG77Q";  // Replace with your Google Place ID
+
   useEffect(() => {
-    const fetchGoogleReviews = async () => {
-      try { const apiKey = "AIzaSyA8mEJ6rWpwenIICQ_7A-6Z94uxAwsuJlQ"; // Replace with your Google API key
-        const placeId = "16704305020285321390"; // Replace with your Google Place ID//
+    const fetchReviews = async () => {
+      try {
+        // Make sure to include the placeId in the URL
+        const response = await axios.get(
+          `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=name,rating,reviews,formatted_address&key=${apiKey}`
+        );
 
-        const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=reviews&key=${apiKey}`
-
-
-        const response = await axios.get(url);
+        // Check if reviews exist and set them in state
         if (response.data && response.data.result && response.data.result.reviews) {
           setReviews(response.data.result.reviews);
         } else {
-          setError("Inga recensioner hittades.");
+          setError("No reviews found.");
         }
       } catch (error) {
-        console.error("Error fetching reviews:", error);
-        setError("Kunde inte hämta recensioner. Försök igen senare.");
+        console.error("Error fetching reviews:", error.message);
+        setError("Could not fetch reviews.");
       }
     };
 
-    fetchGoogleReviews();
-  }, []);
+    fetchReviews();
+  }, []); // Empty dependency array to run once on mount
 
   return (
     <div className="container my-4">

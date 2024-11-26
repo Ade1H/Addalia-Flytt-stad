@@ -44,7 +44,7 @@ function Home() {
 
 <div>
       {/* Andra sektioner */}
-      <ReviewsCarousel />
+      {/* <ReviewsCarousel /> */}
     </div>
 
 
