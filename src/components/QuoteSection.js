@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser"; // Import EmailJS
+import PrisFlyttstadning from './PrisFlyttstadning';
 
 const QuoteRequest = () => {
   const [formData, setFormData] = useState({
@@ -206,6 +207,9 @@ const QuoteRequest = () => {
           Skicka offert
         </button>
       </form>
+      <div className="container">
+          <PrisFlyttstadning />
+        </div>
     </div>
   );
 };

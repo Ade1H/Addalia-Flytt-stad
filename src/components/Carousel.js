@@ -1,8 +1,15 @@
 import React from 'react';
-import PrisFlyttstadning from './PrisFlyttstadning';
 
 const Carousel = () => (
-  <div id="carouselExampleIndicators" className="carousel slide mb-4" data-bs-ride="carousel">
+  <div
+    id="carouselExampleIndicators"
+    className="carousel slide mb-4"
+    data-bs-ride="carousel"
+    style={{
+      overflow: 'hidden', // Ta bort extra utrymme utanför bilderna
+    }}
+  >
+    {/* Indicators */}
     <div className="carousel-indicators">
       <button
         type="button"
@@ -19,33 +26,43 @@ const Carousel = () => (
         aria-label="Slide 2"
       ></button>
     </div>
+
+    {/* Carousel Inner */}
     <div className="carousel-inner">
-      {/* Första slide */}
+      {/* Slide 1 */}
       <div className="carousel-item active">
         <img
           src="/våran service-4.png"
-          className="d-block w-100 img-fluid"
+          className="d-block w-100"
           alt="Byggtjänster - Renoveringar"
-          style={{ maxHeight: '500px', objectFit: 'contain' }}
+          style={{
+            height: '100%',
+            width: '100%',
+            objectFit: 'cover', // Fyll hela ytan utan att ändra proportionerna
+            margin: 0,
+            padding: 0,
+          }}
         />
       </div>
 
-      {/* Andra slide */}
-      <div
-        className="carousel-item"
-        style={{
-          minHeight: '500px',
-          padding: '2rem 0',
-          backgroundColor: '#f8f9fa',
-        }}
-      >
-        <div className="container">
-          <PrisFlyttstadning />
-        </div>
+      {/* Slide 2 */}
+      <div className="carousel-item">
+        <img
+          src="/våran service-5.png"
+          className="d-block w-100"
+          alt="Byggtjänster - Renoveringar"
+          style={{
+            height: '100%',
+            width: '100%',
+            objectFit: 'cover', // Fyll hela ytan utan att ändra proportionerna
+            margin: 0,
+            padding: 0,
+          }}
+        />
       </div>
     </div>
 
-    {/* Navigationsknappar */}
+    {/* Navigation Buttons */}
     <button
       className="carousel-control-prev"
       type="button"

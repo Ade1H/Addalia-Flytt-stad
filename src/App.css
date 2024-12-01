@@ -1,0 +1,21 @@
+.carousel-inner {
+  max-height: 500px; /* Håll carouselens höjd konstant */
+  overflow: hidden; /* Dölj innehåll som sticker ut */
+}
+
+.carousel-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Fyll hela carouselens höjd */
+}
+
+.carousel-item img {
+  max-width: 100%; /* Gör bilden responsiv */
+  height: auto;
+  object-fit: cover; /* Fyll carouselen utan att förvränga bilden */
+}
+
+.table {
+  font-size: 0.9rem; /* Anpassa tabellstorleken */
+}
