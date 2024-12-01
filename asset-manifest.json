@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.79d19d76.css",
-    "main.js": "/static/js/main.e0641cae.js",
-    "static/js/961.ed70cad5.chunk.js": "/static/js/961.ed70cad5.chunk.js",
+    "main.js": "/static/js/main.82c90592.js",
+    "static/js/961.bf4c6d14.chunk.js": "/static/js/961.bf4c6d14.chunk.js",
     "static/js/934.bb78d869.chunk.js": "/static/js/934.bb78d869.chunk.js",
     "static/js/774.5dacc582.chunk.js": "/static/js/774.5dacc582.chunk.js",
     "static/js/147.c438afe3.chunk.js": "/static/js/147.c438afe3.chunk.js",
@@ -31,8 +31,8 @@
     "static/media/kontorsstadning.jpg": "/static/media/kontorsstadning.b700351e7dfd1344af9a.jpg",
     "index.html": "/index.html",
     "main.79d19d76.css.map": "/static/css/main.79d19d76.css.map",
-    "main.e0641cae.js.map": "/static/js/main.e0641cae.js.map",
-    "961.ed70cad5.chunk.js.map": "/static/js/961.ed70cad5.chunk.js.map",
+    "main.82c90592.js.map": "/static/js/main.82c90592.js.map",
+    "961.bf4c6d14.chunk.js.map": "/static/js/961.bf4c6d14.chunk.js.map",
     "934.bb78d869.chunk.js.map": "/static/js/934.bb78d869.chunk.js.map",
     "774.5dacc582.chunk.js.map": "/static/js/774.5dacc582.chunk.js.map",
     "147.c438afe3.chunk.js.map": "/static/js/147.c438afe3.chunk.js.map",
@@ -42,6 +42,6 @@
   },
   "entrypoints": [
     "static/css/main.79d19d76.css",
-    "static/js/main.e0641cae.js"
+    "static/js/main.82c90592.js"
   ]
 }
