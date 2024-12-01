@@ -12,9 +12,10 @@ const Footer = () => {
           <a href="https://www.instagram.com" target="_blank" className="text-white mx-3" rel="noopener noreferrer">
             <i className="fab fa-instagram fa-2x"></i>
           </a>
-          <a href="https://www.linkedin.com" target="_blank" className="text-white mx-3" rel="noopener noreferrer">
-            <i className="fab fa-linkedin fa-2x"></i>
-          </a>
+          <a href="https://www.tiktok.com" target="_blank" className="text-white mx-3" rel="noopener noreferrer">
+  <i className="fab fa-tiktok fa-2x"></i>
+</a>
+
         </div>
 
         {/* Kontaktinformation */}
@@ -28,7 +29,7 @@ const Footer = () => {
           <p>Adress: Storängsgatan 2, 413 19 Göteborg</p>
         </div>
 
-      
+
       </div>
     </footer>
   );
