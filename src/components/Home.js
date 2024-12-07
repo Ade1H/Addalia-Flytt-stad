@@ -2,6 +2,7 @@ import React from 'react';
 import Hero from './Hero';
 // import Carousel from './Carousel';
 import TwoDropdowns from './TwoDropdowns';
+import Contact from './Contact';
 
 
 import MapSection from './MapSection';
@@ -9,6 +10,7 @@ import MapSection from './MapSection';
 
 import 'bootstrap/dist/css/bootstrap.min.css'; // För CSS
 import 'bootstrap/dist/js/bootstrap.bundle.min';
+
 
 function Home() {
 
@@ -28,9 +30,14 @@ function Home() {
       </div>
 
 
+
+
 <div>
+
       {/* Andra sektioner */}
-      {/* <ReviewsCarousel /> */}
+
+        <Contact />
+
     </div>
 
 

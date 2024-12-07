@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import service4 from '../assets/images/våran service-4.png';
@@ -9,7 +9,7 @@ import servicescatalogFlytt from '../assets/images/servicescatalogFlytt.png';
 // import './Carousel.css'; // Ensure this includes your custom CSS
 
 const Carousel = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   return (
     <div className="container-fluid px-0">
@@ -57,12 +57,7 @@ const Carousel = () => {
               alt="Städtjänster Slide 3"
               style={{ opacity: 0.6 }}
             />
-            <button
-              className="btn btn-primary position-absolute top-0 end-0 translate-middle-y m-3"
-              onClick={() => navigate('/stad')}
-            >
-              Läs mer
-            </button>
+
           </div>
           <div className="carousel-item">
             <img
@@ -71,12 +66,7 @@ const Carousel = () => {
               alt="Flyttjänster Slide 4"
               style={{ opacity: 0.6 }}
             />
-            <button
-              className="btn btn-primary position-absolute top-0 end-0 translate-middle-y m-3"
-              onClick={() => navigate('/flytt')}
-            >
-              Läs mer
-            </button>
+
           </div>
         </div>
 
