@@ -6,10 +6,10 @@ const Footer = () => {
       <div className="container">
         {/* Social media links */}
         <div className="d-flex justify-content-center mb-4">
-          <a href="https://www.facebook.com" target="_blank" className="text-white mx-3" rel="noopener noreferrer">
+          <a href="https://www.facebook.com/share/14TvLe8xtg/" target="_blank" className="text-white mx-3" rel="noopener noreferrer">
             <i className="fab fa-facebook fa-2x"></i>
           </a>
-          <a href="https://www.instagram.com" target="_blank" className="text-white mx-3" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/addaliaservice/" target="_blank" className="text-white mx-3" rel="noopener noreferrer">
             <i className="fab fa-instagram fa-2x"></i>
           </a>
           <a href="https://www.tiktok.com" target="_blank" className="text-white mx-3" rel="noopener noreferrer">

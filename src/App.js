@@ -12,7 +12,7 @@ import ErrorBoundary from './ErrorBoundary';
 // import PrisFlyttstadning from './components/PrisFlyttstadning'
 const Home = React.lazy(() => import('./components/Home'));
 const OmOss = React.lazy(() => import('./components/OmOss'));
-const QuoteRequest= React.lazy(() => import('./components/QuoteSection'));
+const QuoteRequest= React.lazy(() => import('./components/offert'));
 const Stadtjanster = React.lazy(() => import('./components/Stadtjanster'));
 const Flyttjanster = React.lazy(() => import('./components/Flyttjanster'));
 

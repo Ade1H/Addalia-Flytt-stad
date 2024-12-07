@@ -1,10 +1,10 @@
 .carousel-inner {
-  max-height: 500px; /* Håll carouselens höjd konstant */
+  max-height: 550px; /* Håll carouselens höjd konstant */
   overflow: hidden; /* Dölj innehåll som sticker ut */
 }
 
 .carousel-item {
-  display: flex;
+
   align-items: center;
   justify-content: center;
   height: 100%; /* Fyll hela carouselens höjd */
@@ -18,4 +18,57 @@
 
 .table {
   font-size: 0.9rem; /* Anpassa tabellstorleken */
+}
+
+
+
+
+.hero-section {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn-outline-light {
+  border-radius: 5px;
+}
+
+
+
+.hero {
+  position: relative;
+  z-index: 1; /* Gör att hero-bilden ligger bakom navbaren */
+}
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2rem; /* Mindre rubrikstorlek på små skärmar */
+  }
+
+  .hero-text p {
+    font-size: 1rem; /* Mindre textstorlek på små skärmar */
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-text p {
+    font-size: 0.875rem;
+  }
 }

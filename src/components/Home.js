@@ -1,6 +1,8 @@
 import React from 'react';
+import Hero from './Hero';
+// import Carousel from './Carousel';
+import TwoDropdowns from './TwoDropdowns';
 
-import Carousel from './Carousel';
 
 import MapSection from './MapSection';
 // import ReviewsCarousel from "./ReviewsCarousel";
@@ -13,8 +15,17 @@ function Home() {
 
   return (
     <>
+  <Hero />
+      {/* <Carousel /> */}
 
-      <Carousel />
+      <div className="container mt-5 text-center">
+
+
+        <div className="d-flex justify-content-center gap-3">
+
+        </div>
+        <TwoDropdowns />
+      </div>
 
 
 <div>
