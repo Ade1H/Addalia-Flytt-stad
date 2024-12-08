@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <nav
       className="navbar navbar-expand-lg fixed-top"
-      style={{ backgroundColor: "#ced4da", zIndex: 10, opacity:0.7 }}
+      style={{ backgroundColor: "#ced4da", zIndex: 10, opacity:0.7, padding: "0.1rem 1rem" }}
     >
       <div className="container-fluid">
         {/* Logo */}

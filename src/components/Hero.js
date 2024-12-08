@@ -29,13 +29,13 @@ const Hero = () => {
           zIndex: 2,
         }}
       >
-        <h1
+        <h4
           style={{
             fontSize: '3rem', // Standardstorlek
           }}
         >
           Välkommen till Addalia
-        </h1>
+        </h4>
         <p
           style={{
             fontSize: '1.5rem', // Standardstorlek
