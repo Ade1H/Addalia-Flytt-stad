@@ -11,7 +11,7 @@ const Navbar = () => {
         {/* Logo */}
         <Link to="/" className="navbar-brand">
           <img
-            src="/Addalia-5.png"
+            src="/logoAT.png"
             alt="Logo"
             className="rounded-circle"
             style={{ width: "100px", height: "100px", opacity: 0.8 }}
