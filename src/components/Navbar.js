@@ -4,8 +4,9 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <nav
-      className="navbar navbar-expand-lg fixed-top"
-      style={{ backgroundColor: "#ced4da", zIndex: 10, padding: "0.1rem 0.1rem" }}
+      className="navbar navbar-dark bg-primary fixed-top"
+      style={{
+        background: "linear-gradient(90deg, rgb(2,0,36) 0%, #2c3e50 50%, rgba(0,212,255,1) 100%)", zIndex: 10, padding: "0.1rem 0.1rem",  }}
     >
       <div className="container-fluid">
         {/* Logo */}
@@ -14,7 +15,7 @@ const Navbar = () => {
             src="/logoAT.png"
             alt="Logo"
             className="rounded-circle"
-            style={{ width: "100px", height: "100px", opacity: 0.8 }}
+            style={{ width: "100px", height: "100px", opacity: 0.6 }}
           />
         </Link>
 

@@ -1,3 +1,9 @@
+html,body {
+  margin: 0;
+  padding: 0;
+}
+
+
 .carousel-inner {
   max-height: 550px; /* Håll carouselens höjd konstant */
   overflow: hidden; /* Dölj innehåll som sticker ut */

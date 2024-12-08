@@ -2,7 +2,8 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="text-center py-4" style={{ backgroundColor: "#2c3e50", color: "#fff" }}>
+    <footer className="text-center py-4" style={{ 
+      background: "linear-gradient(90deg, #2c3e50 0%, #4ca1af 50%, #2c3e50 100%)", color: "#fff" }}>
       <div className="container">
         {/* Social media links */}
         <div className="d-flex justify-content-center mb-4">

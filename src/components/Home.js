@@ -3,7 +3,7 @@ import Hero from './Hero';
 // import Carousel from './Carousel';
 import TwoDropdowns from './TwoDropdowns';
 import Contact from './Contact';
-
+import PrisFlyttstadning from './PrisFlyttstadning';
 
 import MapSection from './MapSection';
 // import ReviewsCarousel from "./ReviewsCarousel";
@@ -17,40 +17,12 @@ function Home() {
 
   return (
     <>
-  <Hero />
-      {/* <Carousel /> */}
+      <Hero />
+      <TwoDropdowns />
+      <PrisFlyttstadning />
+      <Contact />
+      <MapSection />
 
-      <div className="container mt-5 text-center">
-
-
-        <div className="d-flex justify-content-center gap-3">
-
-        </div>
-        <TwoDropdowns />
-      </div>
-
-
-
-
-<div>
-
-      {/* Andra sektioner */}
-
-        <Contact />
-
-    </div>
-
-
-      {/* <ServicesSection openModal={openModal} /> */}
-      {/* <ServiceModal
-        showModal={showModal}
-        selectedService={selectedService}
-        renderModalContent={renderModalContent}
-        handleClose={() => setShowModal(false)}
-      /> */}
-  <div className="container my-5">
-  <MapSection />
-</div>
 
     </>
   );

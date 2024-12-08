@@ -1,7 +1,6 @@
 import React from 'react';
 import Carousel from './Carousel';
 import HuvudBild from '../assets/images/HuvudBild.jpg';
-import '../App.css'
 
 const Hero = () => {
   return (
@@ -14,6 +13,7 @@ const Hero = () => {
         height: '100vh', // Full skärmhöjd
         width: '100%',
         overflow: 'hidden', // För att undvika överflöd
+
 
       }}
     >
