@@ -65,9 +65,9 @@ const QuoteRequest = () => {
   };
 
   return (
-    <div className="container mt-5">
+    <div  style={{ marginTop: "120px" }} >
       <h2 className="text-center">Få en kostnadsfri offert</h2>
-      <div className="d-flex flex-column align-items-center my-4">
+      <div className="d-flex flex-column align-items-center my-4" >
         <p className="text-center mb-3"></p>
         <a
   href="tel:+46123456789"

@@ -26,7 +26,11 @@ const Flyttjanster = React.lazy(() => import('./components/Flyttjanster'));
 function App() {
   return (
     <Router>
+      <div class="mt-5">
       <Navbar />
+</div>
+
+
       <ErrorBoundary>
     <Suspense fallback={<div>Loading...</div>}>
 

@@ -127,7 +127,7 @@ const ServicesWithModal = () => {
 
 
   return (
-    <div>
+    <div  style={{ marginTop: "120px" }}>
       {/* Services Section */}
       <section className="container my-5" id="service">
         <h2 className="text-center mb-4">Våra Flyttjänster</h2>

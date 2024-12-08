@@ -43,8 +43,8 @@ const Contact = () => {
   };
 
   return (
-    <div className="container my-5">
-      <div className="services-section">
+    <div className="container my-5" >
+      <div className="services-section" style={{ marginTop: "120px" }}>
         <h3 className="text-center mb-4">Våra Tjänster</h3>
         <p>
           Hos oss på Addalia erbjuder vi ett brett utbud av professionella tjänster för både städning och flytt. Vi är dedikerade till att underlätta våra kunders vardag genom att erbjuda pålitliga och effektiva lösningar. Oavsett om du behöver hjälp med en grundlig hemstädning eller om du ska flytta till ett nytt hem, är vi här för att hjälpa till. Här är en översikt över de tjänster vi erbjuder:
