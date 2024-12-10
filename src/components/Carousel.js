@@ -1,26 +1,21 @@
 import React from 'react';
-// import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import service4 from '../assets/images/våran service-4.png';
-import service6 from '../assets/images/våran service-7.png';
 import servicescatalogStad from '../assets/images/servicescatalogStad.png';
 import servicescatalogFlytt from '../assets/images/servicescatalogFlytt.png';
-// import './Carousel.css'; // Ensure this includes your custom CSS
 
 const Carousel = () => {
-  // const navigate = useNavigate();
-
   return (
     <div className="container-fluid px-0">
       <div
         id="carouselExampleIndicators"
         className="carousel slide"
         data-bs-ride="carousel"
-        data-bs-interval="3000"
+        data-bs-interval="5000"
       >
         <div className="carousel-indicators">
-          {['Slide 1', 'Slide 2', 'Slide 3', 'Slide 4'].map((label, index) => (
+          {['Slide 1', 'Slide 2', 'Slide 3'].map((label, index) => (
             <button
               key={index}
               type="button"
@@ -39,15 +34,7 @@ const Carousel = () => {
               src={service4}
               className="d-block w-100"
               alt="Byggtjänster - Renoveringar Slide 1"
-              style={{ opacity: 0.6 }}
-            />
-          </div>
-          <div className="carousel-item">
-            <img
-              src={service6}
-              className="d-block w-100"
-              alt="Byggtjänster - Renoveringar Slide 2"
-              style={{ opacity: 0.6 }}
+              style={{ height: '60vh', objectFit: 'cover', opacity: 0.6 }}
             />
           </div>
           <div className="carousel-item">
@@ -55,18 +42,16 @@ const Carousel = () => {
               src={servicescatalogStad}
               className="d-block w-100"
               alt="Städtjänster Slide 3"
-              style={{ opacity: 0.6 }}
+              style={{ height: '60vh', objectFit: 'cover', opacity: 0.6 }}
             />
-
           </div>
           <div className="carousel-item">
             <img
               src={servicescatalogFlytt}
               className="d-block w-100"
               alt="Flyttjänster Slide 4"
-              style={{ opacity: 0.6 }}
+              style={{ height: '60vh', objectFit: 'cover', opacity: 0.6 }}
             />
-
           </div>
         </div>
 

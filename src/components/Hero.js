@@ -13,17 +13,15 @@ const Hero = () => {
         height: '100vh', // Full skärmhöjd
         width: '100%',
         overflow: 'hidden', // För att undvika överflöd
-
-
       }}
     >
       {/* Texten i hero-sektionen */}
       <div
         style={{
           position: 'absolute',
-          top: '20%',
+          top: '10%', // Flytta texten högre upp
           left: '50%',
-          transform: 'translate(-50%, -20%)',
+          transform: 'translate(-50%, -10%)', // Justera transformeringen
           color: 'white',
           textAlign: 'center',
           zIndex: 2,
