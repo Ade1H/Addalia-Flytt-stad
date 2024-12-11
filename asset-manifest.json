@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.acff1d43.css",
-    "main.js": "/static/js/main.33a1d238.js",
-    "static/js/641.4a303bb8.chunk.js": "/static/js/641.4a303bb8.chunk.js",
+    "main.js": "/static/js/main.d27d023e.js",
+    "static/js/486.c6aee43d.chunk.js": "/static/js/486.c6aee43d.chunk.js",
     "static/js/934.83705550.chunk.js": "/static/js/934.83705550.chunk.js",
     "static/js/435.39d311e7.chunk.js": "/static/js/435.39d311e7.chunk.js",
     "static/js/518.77822c68.chunk.js": "/static/js/518.77822c68.chunk.js",
@@ -13,7 +13,6 @@
     "static/media/recycling.jpg": "/static/media/recycling.48cd352f1e0f52f7e464.jpg",
     "static/media/servicescatalogFlytt.png": "/static/media/servicescatalogFlytt.9eb1e13735c40fcb3234.png",
     "static/media/våran service-4.png": "/static/media/våran service-4.2047dd67e8692e97a68a.png",
-    "static/media/våran service-7.png": "/static/media/våran service-7.1bd4cbc19056906cc7f5.png",
     "static/media/forradvind.jpg": "/static/media/forradvind.deb45a0f546b4b110c86.jpg",
     "static/media/specialTransport.jpg": "/static/media/specialTransport.680c357904ba8b118cca.jpg",
     "static/media/trappstadning.jpg": "/static/media/trappstadning.6fce58b138ccf9be0b8c.jpg",
@@ -36,8 +35,8 @@
     "static/media/kontorsstadning.jpg": "/static/media/kontorsstadning.b700351e7dfd1344af9a.jpg",
     "index.html": "/index.html",
     "main.acff1d43.css.map": "/static/css/main.acff1d43.css.map",
-    "main.33a1d238.js.map": "/static/js/main.33a1d238.js.map",
-    "641.4a303bb8.chunk.js.map": "/static/js/641.4a303bb8.chunk.js.map",
+    "main.d27d023e.js.map": "/static/js/main.d27d023e.js.map",
+    "486.c6aee43d.chunk.js.map": "/static/js/486.c6aee43d.chunk.js.map",
     "934.83705550.chunk.js.map": "/static/js/934.83705550.chunk.js.map",
     "435.39d311e7.chunk.js.map": "/static/js/435.39d311e7.chunk.js.map",
     "518.77822c68.chunk.js.map": "/static/js/518.77822c68.chunk.js.map",
@@ -47,6 +46,6 @@
   },
   "entrypoints": [
     "static/css/main.acff1d43.css",
-    "static/js/main.33a1d238.js"
+    "static/js/main.d27d023e.js"
   ]
 }
