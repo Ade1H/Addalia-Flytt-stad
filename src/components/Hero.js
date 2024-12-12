@@ -13,27 +13,33 @@ const Hero = () => {
         height: '100vh', // Full skärmhöjd
         width: '100%',
         overflow: 'hidden', // För att undvika överflöd
+
+
       }}
     >
       {/* Texten i hero-sektionen */}
       <div
         style={{
           position: 'absolute',
-          top: '10%', // Flytta texten högre upp
+          top: '20%',
           left: '50%',
-          transform: 'translate(-50%, -10%)', // Justera transformeringen
+          transform: 'translate(-50%, -20%)',
           color: 'white',
           textAlign: 'center',
           zIndex: 2,
         }}
       >
-        <h4
-          style={{
-            fontSize: '3rem', // Standardstorlek
-          }}
-        >
-          Välkommen till Addalia
-        </h4>
+       <h4
+  style={{
+    fontSize: '3rem', // Standardstorlek
+    marginTop: '-2rem', // Flyttar texten uppåt
+    textAlign: 'center', // Justera centrerad text om behövs
+   
+  }}
+>
+  Välkommen till Addalia
+</h4>
+
         <p
           style={{
             fontSize: '1.5rem', // Standardstorlek

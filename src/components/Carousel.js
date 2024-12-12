@@ -34,7 +34,13 @@ const Carousel = () => {
               src={service4}
               className="d-block w-100"
               alt="Byggtjänster - Renoveringar Slide 1"
-              style={{ height: '60vh', objectFit: 'cover', opacity: 0.6 }}
+              style={{
+                width: '100%',
+                height: 'auto', // Dynamisk höjd
+                objectFit: 'cover', // Anpassa utan att förvränga bilden
+                opacity: 0.6
+              }}
+
             />
           </div>
           <div className="carousel-item">
@@ -42,7 +48,13 @@ const Carousel = () => {
               src={servicescatalogStad}
               className="d-block w-100"
               alt="Städtjänster Slide 3"
-              style={{ height: '60vh', objectFit: 'cover', opacity: 0.6 }}
+              style={{
+                width: '100%',
+                height: 'auto', // Dynamisk höjd
+                objectFit: 'cover', // Anpassa utan att förvränga bilden
+                opacity: 0.6
+              }}
+
             />
           </div>
           <div className="carousel-item">
@@ -50,7 +62,14 @@ const Carousel = () => {
               src={servicescatalogFlytt}
               className="d-block w-100"
               alt="Flyttjänster Slide 4"
-              style={{ height: '60vh', objectFit: 'cover', opacity: 0.6 }}
+              style={{
+                width: '100%',
+                height: 'auto', // Dynamisk höjd
+                objectFit: 'cover', // Anpassa utan att förvränga bilden
+
+                opacity: 0.6
+              }}
+
             />
           </div>
         </div>
