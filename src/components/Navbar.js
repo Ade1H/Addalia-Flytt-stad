@@ -1,12 +1,40 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  useEffect(() => {
+    // Funktion för att stänga hamburgermenyn vid klick utanför eller på en länk
+    const handleClickOutside = (event) => {
+      const navbarCollapse = document.getElementById("navbarNav");
+      const navbarToggler = document.querySelector(".navbar-toggler");
+
+      if (
+        navbarCollapse.classList.contains("show") && // Kontrollera om menyn är öppen
+        (!navbarCollapse.contains(event.target) || // Klicket är utanför menyn
+          event.target.tagName === "A") // Klick på en länk
+      ) {
+        navbarToggler.click(); // Simulera en klick för att stänga menyn
+      }
+    };
+
+    // Lägg till händelselyssnare
+    document.addEventListener("click", handleClickOutside);
+
+    // Rensa händelselyssnaren vid komponentnedmontering
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
+
   return (
     <nav
       className="navbar navbar-dark bg-primary fixed-top"
       style={{
-        background: "linear-gradient(90deg, rgb(2,0,36) 0%, #2c3e50 50%, rgba(0,212,255,1) 100%)", zIndex: 10, padding: "0.1rem 0.1rem",  }}
+        background:
+          "linear-gradient(90deg, rgb(2,0,36) 0%, #2c3e50 50%, rgba(0,212,255,1) 100%)",
+        zIndex: 10,
+        padding: "0.1rem 0.1rem",
+      }}
     >
       <div className="container-fluid">
         {/* Logo */}
@@ -21,16 +49,16 @@ const Navbar = () => {
 
         {/* Toggler Button */}
         <button
-  className="navbar-toggler"
-  type="button"
-  data-bs-toggle="collapse"
-  data-bs-target="#navbarNav"
-  aria-controls="navbarNav"
-  aria-expanded="false"
-  aria-label="Toggle navigation"
->
-  <span className="navbar-toggler-icon"></span>
-</button>
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
 
         {/* Navbar Links */}
         <div className="collapse navbar-collapse" id="navbarNav">
