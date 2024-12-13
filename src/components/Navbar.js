@@ -3,24 +3,21 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   useEffect(() => {
-    // Funktion för att stänga hamburgermenyn vid klick utanför eller på en länk
+    // Function to close the hamburger menu when clicking outside or on a link
     const handleClickOutside = (event) => {
       const navbarCollapse = document.getElementById("navbarNav");
       const navbarToggler = document.querySelector(".navbar-toggler");
 
       if (
-        navbarCollapse.classList.contains("show") && // Kontrollera om menyn är öppen
-        (!navbarCollapse.contains(event.target) || // Klicket är utanför menyn
-          event.target.tagName === "A") // Klick på en länk
+        navbarCollapse.classList.contains("show") &&
+        (!navbarCollapse.contains(event.target) || event.target.tagName === "A")
       ) {
-        navbarToggler.click(); // Simulera en klick för att stänga menyn
+        navbarToggler.click();
       }
     };
 
-    // Lägg till händelselyssnare
     document.addEventListener("click", handleClickOutside);
 
-    // Rensa händelselyssnaren vid komponentnedmontering
     return () => {
       document.removeEventListener("click", handleClickOutside);
     };
@@ -28,23 +25,30 @@ const Navbar = () => {
 
   return (
     <nav
-      className="navbar navbar-dark bg-primary fixed-top"
+      className="navbar navbar-expand-lg navbar-dark fixed-top"
       style={{
         background:
-          "linear-gradient(90deg, rgb(2,0,36) 0%, #2c3e50 50%, rgba(0,212,255,1) 100%)",
+          "linear-gradient(90deg, rgb(2,0,36) 0%, #34495e 50%, rgba(0,212,255,1) 100%)",
         zIndex: 10,
-        padding: "0.1rem 0.1rem",
+        padding: "0.5rem 1rem",
+        boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.25)",
       }}
     >
       <div className="container-fluid">
         {/* Logo */}
-        <Link to="/" className="navbar-brand">
+        <Link to="/" className="navbar-brand d-flex align-items-center">
           <img
             src="/logoAT.png"
             alt="Logo"
             className="rounded-circle"
-            style={{ width: "100px", height: "100px", opacity: 0.6 }}
+            style={{
+              width: "60px",
+              height: "60px",
+              marginRight: "10px",
+              opacity: 0.9,
+            }}
           />
+          <span style={{ fontWeight: "bold", fontSize: "1.5rem" }}>Addalia</span>
         </Link>
 
         {/* Toggler Button */}
@@ -66,14 +70,18 @@ const Navbar = () => {
             {/* Tjänster Dropdown */}
             <li className="nav-item dropdown">
               <button
-                className="nav-link dropdown-toggle btn btn-link"
+                className="nav-link dropdown-toggle btn btn-link text-light"
                 id="servicesDropdown"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
+                style={{ fontWeight: "bold" }}
               >
                 TJÄNSTER
               </button>
-              <ul className="dropdown-menu" aria-labelledby="servicesDropdown">
+              <ul
+                className="dropdown-menu dropdown-menu-end"
+                aria-labelledby="servicesDropdown"
+              >
                 <li>
                   <Link to="/stad" className="dropdown-item">
                     Städtjänster
@@ -89,15 +97,46 @@ const Navbar = () => {
 
             {/* Offertförfrågan */}
             <li className="nav-item">
-              <Link to="/offertforfragan" className="nav-link">
+              <Link
+                to="/offertforfragan"
+                className="nav-link text-light"
+                style={{
+                  fontWeight: "bold",
+                  textTransform: "uppercase",
+                  transition: "color 0.3s",
+                }}
+              >
                 OFFERTFÖRFRÅGA
               </Link>
             </li>
 
             {/* Om Oss */}
             <li className="nav-item">
-              <Link to="/OmOss" className="nav-link">
+              <Link
+                to="/OmOss"
+                className="nav-link text-light"
+                style={{
+                  fontWeight: "bold",
+                  textTransform: "uppercase",
+                  transition: "color 0.3s",
+                }}
+              >
                 OM OSS
+              </Link>
+            </li>
+
+            {/* Kontakt */}
+            <li className="nav-item">
+              <Link
+                to="/KONTAKT"
+                className="nav-link text-light"
+                style={{
+                  fontWeight: "bold",
+                  textTransform: "uppercase",
+                  transition: "color 0.3s",
+                }}
+              >
+                KONTAKT
               </Link>
             </li>
           </ul>

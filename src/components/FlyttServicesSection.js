@@ -130,7 +130,14 @@ const ServicesWithModal = () => {
     <div  style={{ marginTop: "120px" }}>
       {/* Services Section */}
       <section className="container my-5" id="service">
-        <h2 className="text-center mb-4">Våra Flyttjänster</h2>
+      <h2
+          className="text-center mb-5"
+          style={{
+            fontWeight: "bold",
+            color: "#004085",
+            textShadow: "1px 1px 5px rgba(0, 0, 0, 0.1)",
+          }}
+        >Våra Flyttjänster</h2>
         <div className="row g-4">
           {services.map((service) => (
             <div className="col-md-4" key={service.id}>
@@ -139,14 +146,30 @@ const ServicesWithModal = () => {
                   src={service.image}
                   className="card-img-top"
                   alt={service.title}
-                  style={{ height: "200px", objectFit: "cover" }}
+                  style={{
+                    height: "200px",
+                    objectFit: "cover",
+                    borderTopLeftRadius: "8px",
+                    borderTopRightRadius: "8px",
+                  }}
                 />
               <div className="card-body text-center d-flex flex-column">
-  <h5 className="card-title">{service.title}</h5>
+              <h5
+                    className="card-title"
+                    style={{ fontWeight: "bold", color: "#333" }}
+                  >
+                    {service.title}
+                  </h5>
   <p className="card-text">{service.description}</p>
   <button
     className="btn btn-primary mt-auto w-100"
     onClick={() => openModal(service)}
+    style={{
+      borderRadius: "30px",
+      fontWeight: "bold",
+      backgroundColor: "#004085",
+      borderColor: "#004085",
+    }}
   >
     Läs mer
   </button>
@@ -159,19 +182,28 @@ const ServicesWithModal = () => {
       </section>
 
       {/* Modal */}
-      <Modal show={showModal} onHide={handleClose}>
+      <Modal show={showModal} onHide={handleClose} centered>
         <Modal.Header closeButton>
-          <Modal.Title>{selectedService?.title}</Modal.Title>
+          <Modal.Title style={{ fontWeight: "bold" }}>
+            {selectedService?.title}
+          </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-        {selectedService && selectedService.details ? (
-    <p>{selectedService.details}</p> // Visa detaljerna
-  ) : (
-    <p>Ingen detaljer tillgängliga.</p> // Om inga detaljer finns, visa detta
-  )}
+          <p style={{ fontSize: "1.1rem", lineHeight: "1.6" }}>
+            {selectedService?.details || "Ingen detaljer tillgängliga."}
+          </p>
         </Modal.Body>
         <Modal.Footer>
-        <Button variant="primary" onClick={handleNavigateToQuote}>
+          <Button
+            variant="primary"
+            onClick={handleNavigateToQuote}
+            style={{
+              borderRadius: "30px",
+              fontWeight: "bold",
+              backgroundColor: "#004085",
+              borderColor: "#004085",
+            }}
+          >
             Begär Offert
           </Button>
         </Modal.Footer>

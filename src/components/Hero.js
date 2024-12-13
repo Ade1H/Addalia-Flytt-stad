@@ -21,20 +21,22 @@ const Hero = () => {
       <div
         style={{
           position: 'absolute',
-          top: '20%',
+          top: '10%',
           left: '50%',
-          transform: 'translate(-50%, -20%)',
-          color: 'white',
+          transform: 'translate(-50%, 0%)',
+          color: '#fff',
           textAlign: 'center',
           zIndex: 2,
         }}
       >
        <h4
   style={{
-    fontSize: '3rem', // Standardstorlek
+    fontSize: '4rem', // Standardstorlek
     marginTop: '-2rem', // Flyttar texten uppåt
     textAlign: 'center', // Justera centrerad text om behövs
-   
+    fontWeight: 'bold',
+    textShadow: '2px 2px 10px rgba(0, 0, 0, 0.7)',
+
   }}
 >
   Välkommen till Addalia
@@ -43,9 +45,12 @@ const Hero = () => {
         <p
           style={{
             fontSize: '1.5rem', // Standardstorlek
+            fontWeight: '300',
+            textShadow: '1px 1px 5px rgba(0, 0, 0, 0.7)',
+
           }}
         >
-          Effektiva tjänster
+          Effektiva tjänster för dina behov
         </p>
       </div>
 
@@ -67,7 +72,9 @@ const Hero = () => {
         style={{
           position: 'absolute',
           bottom: '5%',
-          width: '100%',
+          left: '49%',
+          width: '90%',
+          transform: 'translateX(-50%)',
           zIndex: 3,
         }}
       >

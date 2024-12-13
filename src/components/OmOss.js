@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import emailjs from '@emailjs/browser';
+import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
 
-  const [messageStatus, setMessageStatus] = useState(''); // Status for success or error messages
+  const [messageStatus, setMessageStatus] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -20,65 +20,103 @@ const Contact = () => {
 
     emailjs
       .send(
-        'service_zs1rvlc', // Replace with your EmailJS service ID
-        'template_lwt6fbd', // Replace with your EmailJS template ID
+        "service_zs1rvlc",
+        "template_lwt6fbd",
         {
           name: formData.name,
           email: formData.email,
           message: formData.message,
         },
-        'Kgzm3fkD__CsILSig' // Replace with your EmailJS user ID (or public key)
+        "Kgzm3fkD__CsILSig"
       )
       .then(
         (response) => {
-          console.log('SUCCESS!', response.status, response.text);
-          setMessageStatus('Ditt meddelande har skickats framgångsrikt!');
-          setFormData({ name: '', email: '', message: '' }); // Reset form
+          console.log("SUCCESS!", response.status, response.text);
+          setMessageStatus("Ditt meddelande har skickats framgångsrikt!");
+          setFormData({ name: "", email: "", message: "" });
         },
         (error) => {
-          console.error('FAILED...', error);
-          setMessageStatus('Något gick fel. Försök igen senare.');
+          console.error("FAILED...", error);
+          setMessageStatus("Något gick fel. Försök igen senare.");
         }
       );
   };
 
   return (
-    <div className="container my-5" >
-      <div className="services-section" style={{ marginTop: "120px" }}>
-        <h3 className="text-center mb-4">Våra Tjänster</h3>
-        <p>
-          Hos oss på Addalia erbjuder vi ett brett utbud av professionella tjänster för både städning och flytt. Vi är dedikerade till att underlätta våra kunders vardag genom att erbjuda pålitliga och effektiva lösningar. Oavsett om du behöver hjälp med en grundlig hemstädning eller om du ska flytta till ett nytt hem, är vi här för att hjälpa till. Här är en översikt över de tjänster vi erbjuder:
+    <div className="container my-5">
+      {/* Services Section */}
+      <div
+        className="services-section py-5 px-4 shadow-sm rounded"
+        style={{
+          marginTop: "120px",
+          backgroundColor: "#f9f9f9",
+          borderRadius: "10px",
+          boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
+        }}
+      >
+        <h3
+          className="text-center mb-4"
+          style={{
+            fontWeight: "bold",
+            color: "#004085",
+            textShadow: "1px 1px 5px rgba(0, 0, 0, 0.1)",
+          }}
+        >
+          Våra Tjänster
+        </h3>
+        <p style={{ fontSize: "1.2rem", lineHeight: "1.8", textAlign: "justify" }}>
+          Hos oss på Addalia erbjuder vi ett brett utbud av professionella tjänster för både städning och flytt. Vi är
+          dedikerade till att underlätta våra kunders vardag genom att erbjuda pålitliga och effektiva lösningar. Här är
+          en översikt över de tjänster vi erbjuder:
         </p>
 
-        <h4>Städtjänster</h4>
-        <p>
-          Vi erbjuder ett brett spektrum av städtjänster som passar alla typer av bostäder och lokaler. Vi utför regelbundna hemstädningar för att hålla ditt hem fräscht, flyttstädningar för att säkerställa att din gamla bostad lämnas i perfekt skick, och storstädning inför speciella tillfällen. Våra fönsterputsningstjänster gör att dina fönster glänser, och vi erbjuder även professionell kontorsstädning för att skapa en ren och trivsam arbetsmiljö. Vid byggprojekt ser vi till att byggstädningen sker på ett effektivt sätt innan fastigheten tas i bruk, och vi har även erfarenhet av sanering och hantering av starkt nedsmutsade miljöer. Oavsett om det handlar om att tvätta möbler eller rensa trapphus, är vårt mål att skapa en ren och inbjudande miljö för dig.
+        <h4 style={{ color: "#28a745", fontWeight: "bold", marginTop: "20px" }}>Städtjänster</h4>
+        <p style={{ fontSize: "1.2rem", lineHeight: "1.8", textAlign: "justify" }}>
+          Vi erbjuder ett brett spektrum av städtjänster som passar alla typer av bostäder och lokaler. Vi utför
+          regelbundna hemstädningar för att hålla ditt hem fräscht och flyttstädningar för att säkerställa att din gamla
+          bostad lämnas i perfekt skick.
         </p>
 
-        <h4>Flyttjänster</h4>
-        <p>
-          Vid flytt hjälper vi dig att göra hela processen smidig och stressfri. Vi erbjuder hjälp med bohagsflytt, där vi tar hand om hela flytten, inklusive möbler och ömtåliga föremål. För företag erbjuder vi kontorsflytt, där vi ser till att din verksamhet kan fortsätta utan avbrott. Vi hjälper även till med packning och uppackning, vilket gör det lättare för dig att fokusera på andra delar av flytten. Vi har erfarenhet av att hantera tunga och skrymmande föremål, som pianon eller kassaskåp, och vi erbjuder även tjänster för att montera och demontera möbler. För specialgods, som konstverk eller antikviteter, erbjuder vi säker transport. Vi förvarar även dina tillhörigheter på ett tryggt sätt i magasin om du behöver förvara dem under en period, och vi kan hjälpa dig med utrensning och återvinning av gamla eller oönskade saker. Vi erbjuder dessutom intern flytt inom byggnader samt akutflytt i nödsituationer.
+        <h4 style={{ color: "#28a745", fontWeight: "bold", marginTop: "20px" }}>Flyttjänster</h4>
+        <p style={{ fontSize: "1.2rem", lineHeight: "1.8", textAlign: "justify" }}>
+          Vid flytt hjälper vi dig att göra hela processen smidig och stressfri. Vi erbjuder hjälp med bohagsflytt,
+          kontorsflytt, packning och uppackning, samt transport av specialgods som konstverk eller antikviteter.
         </p>
 
-        <p>
-          Vi på Addalia strävar alltid efter att ge våra kunder bästa möjliga service, oavsett om det handlar om städning eller flytt. Vår erfarna personal är här för att underlätta din vardag, så att du kan fokusera på det som verkligen betyder något för dig.
+        <p style={{ fontSize: "1.2rem", lineHeight: "1.8", textAlign: "justify" }}>
+          Vi på Addalia strävar alltid efter att ge våra kunder bästa möjliga service. Vår erfarna personal är här för att
+          underlätta din vardag, så att du kan fokusera på det som verkligen betyder något för dig.
         </p>
       </div>
 
-      <h2 className="text-center mb-4">Kontakta Oss</h2>
+      {/* Contact Form */}
+      <h2
+        className="text-center mb-4"
+        style={{
+          fontWeight: "bold",
+          color: "#004085",
+          textShadow: "1px 1px 5px rgba(0, 0, 0, 0.1)",
+        }}
+      >
+        Kontakta Oss
+      </h2>
       {messageStatus && (
         <div
           className={`alert ${
-            messageStatus.includes('framgångsrikt') ? 'alert-success' : 'alert-danger'
-          }`}
+            messageStatus.includes("framgångsrikt") ? "alert-success" : "alert-danger"
+          } text-center`}
           role="alert"
         >
           {messageStatus}
         </div>
       )}
-      <form onSubmit={handleSubmit}>
+      <form
+        onSubmit={handleSubmit}
+        className="shadow p-4 rounded bg-light"
+        style={{ maxWidth: "600px", margin: "0 auto" }}
+      >
         <div className="mb-3">
-          <label htmlFor="name" className="form-label">
+          <label htmlFor="name" className="form-label" style={{ fontWeight: "bold" }}>
             Namn
           </label>
           <input
@@ -88,11 +126,12 @@ const Contact = () => {
             name="name"
             value={formData.name}
             onChange={handleChange}
+            placeholder="Skriv ditt namn"
             required
           />
         </div>
         <div className="mb-3">
-          <label htmlFor="email" className="form-label">
+          <label htmlFor="email" className="form-label" style={{ fontWeight: "bold" }}>
             Email
           </label>
           <input
@@ -102,11 +141,12 @@ const Contact = () => {
             name="email"
             value={formData.email}
             onChange={handleChange}
+            placeholder="Skriv din email"
             required
           />
         </div>
         <div className="mb-3">
-          <label htmlFor="message" className="form-label">
+          <label htmlFor="message" className="form-label" style={{ fontWeight: "bold" }}>
             Meddelande
           </label>
           <textarea
@@ -116,12 +156,24 @@ const Contact = () => {
             rows="4"
             value={formData.message}
             onChange={handleChange}
+            placeholder="Skriv ditt meddelande här"
             required
           ></textarea>
         </div>
-        <button type="submit" className="btn btn-primary">
-          Skicka Meddelande
-        </button>
+        <div className="text-center">
+          <button
+            type="submit"
+            className="btn btn-primary btn-lg"
+            style={{
+              backgroundColor: "#004085",
+              borderColor: "#004085",
+              borderRadius: "30px",
+              fontWeight: "bold",
+            }}
+          >
+            Skicka Meddelande
+          </button>
+        </div>
       </form>
     </div>
   );

@@ -10,7 +10,7 @@ const QuoteRequest = () => {
     phone: "",
     propertyType: "",
     serviceType: "",
-   customerMessage: ""
+    customerMessage: ""
   });
 
   const [message, setMessage] = useState("");
@@ -56,6 +56,15 @@ const QuoteRequest = () => {
         (response) => {
           console.log("Email sent successfully!", response);
           setMessage("Offertförfrågan skickad!");
+          setFormData({
+            dimensions: "",
+            postalCode: "",
+            email: "",
+            phone: "",
+            propertyType: "",
+            serviceType: "",
+            customerMessage: ""
+          });
         },
         (error) => {
           console.error("Failed to send email:", error);
@@ -65,34 +74,48 @@ const QuoteRequest = () => {
   };
 
   return (
-    <div  style={{ marginTop: "120px" }} >
-      <h2 className="text-center">Få en kostnadsfri offert</h2>
-      <div className="d-flex flex-column align-items-center my-4" >
-        <p className="text-center mb-3"></p>
+    <div className="container my-5">
+      <h2 className="text-center mb-4" style={{ fontWeight: "bold", color: "#004085", marginTop:"100px" }}>
+        Få en kostnadsfri offert
+      </h2>
+      <div className="d-flex flex-column align-items-center mb-4">
+        <p className="text-center text-muted mb-3">
+          Kontakta oss för att få en snabb och kostnadsfri offert.
+        </p>
         <a
-  href="tel:+46123456789"
-  className="btn btn-outline-primary btn-lg d-flex align-items-center justify-content-center px-4 shadow"
-  style={{ borderRadius: "30px", fontWeight: "bold" }}
-  aria-label="Call us at 072-858 05 98"
->
-  <i className="bi bi-telephone-fill me-2"></i> 072-858 05 98
-</a>
-
+          href="tel:+46123456789"
+          className="btn btn-outline-primary btn-lg px-4 shadow"
+          style={{
+            borderRadius: "30px",
+            fontWeight: "bold",
+            color: "#004085",
+            borderColor: "#004085"
+          }}
+          aria-label="Call us at 072-858 05 98"
+        >
+          <i className="bi bi-telephone-fill me-2"></i> 072-858 05 98
+        </a>
       </div>
 
       {message && (
         <div
           className={`alert ${
             message.includes("fel") ? "alert-danger" : "alert-success"
-          }`}
+          } text-center`}
           role="alert"
+          style={{ fontWeight: "bold", fontSize: "16px" }}
         >
           {message}
         </div>
       )}
-      <form onSubmit={handleSubmit} className="shadow p-4 rounded bg-light">
+
+      <form
+        onSubmit={handleSubmit}
+        className="shadow p-4 rounded bg-light"
+        style={{ maxWidth: "700px", margin: "0 auto" }}
+      >
         <div className="mb-3">
-          <label htmlFor="dimensions" className="form-label">
+          <label htmlFor="dimensions" className="form-label" style={{ fontWeight: "bold" }}>
             Mått
           </label>
           <input
@@ -107,7 +130,7 @@ const QuoteRequest = () => {
           />
         </div>
         <div className="mb-3">
-          <label htmlFor="postalCode" className="form-label">
+          <label htmlFor="postalCode" className="form-label" style={{ fontWeight: "bold" }}>
             Postnummer
           </label>
           <input
@@ -122,7 +145,7 @@ const QuoteRequest = () => {
           />
         </div>
         <div className="mb-3">
-          <label htmlFor="email" className="form-label">
+          <label htmlFor="email" className="form-label" style={{ fontWeight: "bold" }}>
             E-post
           </label>
           <input
@@ -137,7 +160,7 @@ const QuoteRequest = () => {
           />
         </div>
         <div className="mb-3">
-          <label htmlFor="phone" className="form-label">
+          <label htmlFor="phone" className="form-label" style={{ fontWeight: "bold" }}>
             Telefonnummer
           </label>
           <input
@@ -153,7 +176,7 @@ const QuoteRequest = () => {
           />
         </div>
         <div className="mb-3">
-          <label htmlFor="propertyType" className="form-label">
+          <label htmlFor="propertyType" className="form-label" style={{ fontWeight: "bold" }}>
             Typ av Bostad
           </label>
           <select
@@ -172,7 +195,7 @@ const QuoteRequest = () => {
           </select>
         </div>
         <div className="mb-3">
-          <label htmlFor="serviceType" className="form-label">
+          <label htmlFor="serviceType" className="form-label" style={{ fontWeight: "bold" }}>
             Typ av Tjänst
           </label>
           <select
@@ -187,10 +210,9 @@ const QuoteRequest = () => {
             <option value="stad">Städtjänster</option>
             <option value="flytt">Flyttjänster</option>
           </select>
-
         </div>
         <div className="mb-3">
-          <label htmlFor="customerMessage" className="form-label">
+          <label htmlFor="customerMessage" className="form-label" style={{ fontWeight: "bold" }}>
             Ditt meddelande
           </label>
           <textarea
@@ -203,13 +225,24 @@ const QuoteRequest = () => {
             rows="4"
           ></textarea>
         </div>
-        <button type="submit" className="btn btn-primary btn-lg">
-          Skicka offert
-        </button>
-      </form>
-      <div className="container">
-          <PrisFlyttstadning />
+        <div className="text-center">
+          <button
+            type="submit"
+            className="btn btn-primary btn-lg px-5"
+            style={{
+              backgroundColor: "#004085",
+              borderColor: "#004085",
+              borderRadius: "30px",
+              fontWeight: "bold"
+            }}
+          >
+            Skicka offert
+          </button>
         </div>
+      </form>
+      <div className="container mt-5">
+        <PrisFlyttstadning />
+      </div>
     </div>
   );
 };
