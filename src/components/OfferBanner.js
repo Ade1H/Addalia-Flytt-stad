@@ -12,7 +12,7 @@ const OfferBanner = () => {
 
   return (
     <div className="container my-4 offer-banner">
-      <div className="row align-items-center bg-warning text-dark rounded shadow p-4" style={{ marginBottom: '10px' }}>
+      <div className="row align-items-center bg-warning text-dark rounded shadow p-4" style={{ height:'300px' }}>
         {/* Text Section */}
         <div className="col-12 col-md-8 text-center text-md-start mb-3 mb-md-0">
           <h2 className="fw-bold">Specialerbjudande!</h2>
