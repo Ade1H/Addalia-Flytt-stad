@@ -35,6 +35,7 @@ function App() {
             <Route path="/OmOss" element={<OmOss />} />
             <Route path="/Kontakt" element={<KONTAKT />} />
             <Route path="/offertforfragan" element={<QuoteRequest />} />
+            
           </Routes>
         </Suspense>
       </ErrorBoundary>

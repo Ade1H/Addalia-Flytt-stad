@@ -1,6 +1,7 @@
 import React from 'react';
 import Carousel from './Carousel';
 import HuvudBild from '../assets/images/HuvudBild.jpg';
+import Annons from './OfferBanner'
 
 const Hero = () => {
   return (
@@ -72,7 +73,9 @@ const Hero = () => {
           width: '90%',
         }}
       >
+          <Annons />
         <Carousel />
+
       </div>
     </div>
   );
