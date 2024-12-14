@@ -83,7 +83,7 @@ const QuoteRequest = () => {
           Kontakta oss för att få en snabb och kostnadsfri offert.
         </p>
         <a
-          href="tel:072-858 05 98"
+          href="tel:+4672-858 05 98"
           className="btn btn-outline-primary btn-lg px-4 shadow"
           style={{
             borderRadius: "30px",

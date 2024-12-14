@@ -70,7 +70,7 @@ const Contact = () => {
         <div className="d-flex flex-column align-items-center my-4">
           <p className="text-center mb-3 text-muted">Vi ser fram emot att höra från dig!</p>
           <a
-            href="tel:+46123456789"
+            href="tel:+4672-858 05 98"
             className="btn btn-outline-primary btn-lg d-flex align-items-center justify-content-center px-4 shadow"
             style={{
               borderRadius: '30px',
