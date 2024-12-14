@@ -32,7 +32,7 @@ const Hero = () => {
       <div
         style={{
           position: 'absolute',
-          top: '35%', // Justerat för att flytta texten högre upp
+          top: '20%', // Adjusted to move text higher up
           left: '50%',
           transform: 'translate(-50%, -50%)',
           textAlign: 'center',
