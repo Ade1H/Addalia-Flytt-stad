@@ -10,51 +10,12 @@ const Hero = () => {
         backgroundImage: `url(${HuvudBild})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        height: '100vh', // Full skärmhöjd
+        height: '100vh',
         width: '100%',
-        overflow: 'hidden', // För att undvika överflöd
-
-
+        overflow: 'hidden',
       }}
     >
-      {/* Texten i hero-sektionen */}
-      <div
-        style={{
-          position: 'absolute',
-          top: '10%',
-          left: '50%',
-          transform: 'translate(-50%, 0%)',
-          color: '#fff',
-          textAlign: 'center',
-          zIndex: 2,
-        }}
-      >
-       <h4
-  style={{
-    fontSize: '4rem', // Standardstorlek
-    marginTop: '-2rem', // Flyttar texten uppåt
-    textAlign: 'center', // Justera centrerad text om behövs
-    fontWeight: 'bold',
-    textShadow: '2px 2px 10px rgba(0, 0, 0, 0.7)',
-
-  }}
->
-  Välkommen till Addalia
-</h4>
-
-        <p
-          style={{
-            fontSize: '1.5rem', // Standardstorlek
-            fontWeight: '300',
-            textShadow: '1px 1px 5px rgba(0, 0, 0, 0.7)',
-
-          }}
-        >
-          Effektiva tjänster för dina behov
-        </p>
-      </div>
-
-      {/* Overlay för att ge en mörkare effekt på bakgrunden */}
+      {/* Mörk overlay */}
       <div
         style={{
           position: 'absolute',
@@ -62,20 +23,53 @@ const Hero = () => {
           left: 0,
           width: '100%',
           height: '100%',
-          backgroundColor: 'rgba(0, 0, 0, 0.5)',
+          backgroundColor: 'rgba(0, 0, 0, 0.6)',
           zIndex: 1,
         }}
       ></div>
 
-      {/* Karusell ovanpå hero-bilden */}
+      {/* Text-overlay */}
+      <div
+        style={{
+          position: 'absolute',
+          top: '35%', // Justerat för att flytta texten högre upp
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          textAlign: 'center',
+          color: '#fff',
+          zIndex: 2,
+        }}
+      >
+        <h1
+          style={{
+            fontSize: '4rem',
+            fontWeight: 'bold',
+            textShadow: '2px 2px 10px rgba(0, 0, 0, 0.7)',
+          }}
+        >
+          Välkommen till Addalia
+        </h1>
+        <p
+          style={{
+            fontSize: '1.5rem',
+            fontWeight: '300',
+            textShadow: '1px 1px 5px rgba(0, 0, 0, 0.7)',
+            marginTop: '1rem',
+          }}
+        >
+          Effektiva tjänster för dina behov
+        </p>
+      </div>
+
+      {/* Karusell */}
       <div
         style={{
           position: 'absolute',
           bottom: '5%',
-          left: '49%',
-          width: '90%',
+          left: '50%',
           transform: 'translateX(-50%)',
           zIndex: 3,
+          width: '90%',
         }}
       >
         <Carousel />

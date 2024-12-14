@@ -2,7 +2,8 @@
   "name": "bygg-flytt-stad",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://addalia.se",
+  "homepage": "https://Ade1H.github.io/Addalia-Flytt-stad",
+
   "dependencies": {
     "@babel/core": "^7.26.0",
     "@babel/preset-env": "^7.26.0",

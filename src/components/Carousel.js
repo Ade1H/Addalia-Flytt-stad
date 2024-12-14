@@ -1,9 +1,6 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import service4 from '../assets/images/våran service-4.png';
-import servicescatalogStad from '../assets/images/servicescatalogStad.png';
-import servicescatalogFlytt from '../assets/images/servicescatalogFlytt.png';
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 const Carousel = () => {
   return (
@@ -14,63 +11,112 @@ const Carousel = () => {
         data-bs-ride="carousel"
         data-bs-interval="5000"
       >
-        <div className="carousel-indicators">
-          {['Slide 1', 'Slide 2', 'Slide 3'].map((label, index) => (
+        <div className="carousel-indicators" >
+          {[...Array(3)].map((_, index) => (
             <button
               key={index}
               type="button"
               data-bs-target="#carouselExampleIndicators"
               data-bs-slide-to={index}
-              className={index === 0 ? 'active' : ''}
-              aria-current={index === 0 ? 'true' : undefined}
-              aria-label={label}
+              className={index === 0 ? "active" : ""}
+              aria-current={index === 0 ? "true" : undefined}
+              aria-label={`Slide ${index + 1}`}
             ></button>
           ))}
         </div>
 
         <div className="carousel-inner">
-          <div className="carousel-item active">
-            <img
-              src={service4}
-              className="d-block w-100"
-              alt="Byggtjänster - Renoveringar Slide 1"
-              style={{
-                width: '100%',
-                height: 'auto', // Dynamisk höjd
-                objectFit: 'cover', // Anpassa utan att förvränga bilden
-                opacity: 0.6
-              }}
-
-            />
+          {/* Slide 1 */}
+          <div className="carousel-item active" style={{height:'400px'}}>
+          {/* p-4 bg-gradient rounded-3 text-white text-center */}
+            <div className="d-flex align-items-center  justify-content-between p-4 bg-gradient rounded-3 text-white">
+              <div>
+                <h1 className="fw-bold mb-3">
+                  Låt oss ta hand om städningen och flytten
+                </h1>
+                <p className="lead">Med våra professionella tjänster</p>
+              </div>
+              <img
+                src={`${process.env.PUBLIC_URL}/mattmobeltvatt.jpg`}
+                alt="Cleaning"
+                className="rounded-circle"
+                style={{ width: "200px", height: "200px", objectFit: "cover" }}
+              />
+            </div>
           </div>
-          <div className="carousel-item">
-            <img
-              src={servicescatalogStad}
-              className="d-block w-100"
-              alt="Städtjänster Slide 3"
-              style={{
-                width: '100%',
-                height: 'auto', // Dynamisk höjd
-                objectFit: 'cover', // Anpassa utan att förvränga bilden
-                opacity: 0.6
-              }}
 
-            />
+          {/* Slide 2 */}
+          <div className="carousel-item" style={{height:'400px'}}>
+            <div className="p-4 bg-gradient rounded-3 text-white text-center">
+              <h2 className="fw-bold mb-3">Våra Flyttjänster</h2>
+              <div className="d-flex justify-content-around">
+                {[
+                  {
+                    title: "Bohagsflytt",
+                    text: "Flytta hela hemmet inklusive möbler.",
+                    image: `${process.env.PUBLIC_URL}/storage.jpg`,
+                  },
+                  {
+                    title: "Kontorsflytt",
+                    text: "Flytta kontorsutrustning smidigt.",
+                    image: `${process.env.PUBLIC_URL}/officeMove.jpg`,
+                  },
+                  {
+                    title: "Akutflytt",
+                    text: "Snabb hjälp vid nödsituationer.",
+                    image: `${process.env.PUBLIC_URL}/man.jpg`,
+                  },
+                ].map((item, index) => (
+                  <div key={index} className="text-center mx-2">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="rounded-circle mb-2"
+                      style={{ width: "150px", height: "150px" }}
+                    />
+                    <h4 className="fw-bold">{item.title}</h4>
+                    <p>{item.text}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
-          <div className="carousel-item">
-            <img
-              src={servicescatalogFlytt}
-              className="d-block w-100"
-              alt="Flyttjänster Slide 4"
-              style={{
-                width: '100%',
-                height: 'auto', // Dynamisk höjd
-                objectFit: 'cover', // Anpassa utan att förvränga bilden
 
-                opacity: 0.6
-              }}
-
-            />
+          {/* Slide 3 */}
+          <div className="carousel-item" style={{height:'400px'}}>
+            <div className="p-4 bg-gradient rounded-3 text-white text-center">
+              <h2 className="fw-bold mb-3">Våra Städ- och Rengöringstjänster</h2>
+              <div className="d-flex justify-content-around">
+                {[
+                  {
+                    title: "Hemstädning",
+                    text: "Regelbunden städning av hemmet.",
+                    image: `${process.env.PUBLIC_URL}/hemstad.jpg`,
+                  },
+                  {
+                    title: "Flyttstädning",
+                    text: "Grundlig städning efter utflyttning.",
+                    image: `${process.env.PUBLIC_URL}/bohagsflytt.jpg`,
+                  },
+                  {
+                    title: "Storstädning",
+                    text: "Omfattande städning för speciella tillfällen.",
+                    image: `${process.env.PUBLIC_URL}/storstadning.jpg`,
+                  },
+                ].map((item, index) => (
+                  <div key={index} className="text-center mx-2">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="rounded-circle mb-2"
+                      style={{ width: "150px", height: "150px" }}
+                    />
+                    <h4 className="fw-bold">{item.title}</h4>
+                    <p>{item.text}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
 
@@ -80,8 +126,7 @@ const Carousel = () => {
           data-bs-target="#carouselExampleIndicators"
           data-bs-slide="prev"
         >
-          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Previous</span>
+          <span className="carousel-control-prev-icon"></span>
         </button>
         <button
           className="carousel-control-next"
@@ -89,8 +134,7 @@ const Carousel = () => {
           data-bs-target="#carouselExampleIndicators"
           data-bs-slide="next"
         >
-          <span className="carousel-control-next-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Next</span>
+          <span className="carousel-control-next-icon"></span>
         </button>
       </div>
     </div>

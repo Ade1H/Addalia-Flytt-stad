@@ -6,7 +6,7 @@ import TwoDropdowns from './TwoDropdowns';
 // import Contact from './Contact';
 import PrisFlyttstadning from './PrisFlyttstadning';
 // import MapSection from './MapSection';
-import ReviewsCarousel from "./ReviewsCarousel";
+// import ReviewsCarousel from "./ReviewsCarousel";
 
 import 'bootstrap/dist/css/bootstrap.min.css'; // För CSS
 import 'bootstrap/dist/js/bootstrap.bundle.min';
@@ -32,7 +32,7 @@ function Home() {
       <TwoDropdowns />
       <PrisFlyttstadning />
       {/* <Contact /> */}
-      <ReviewsCarousel />
+      {/* <ReviewsCarousel /> */}
       {/* <MapSection /> */}
     </>
   );
