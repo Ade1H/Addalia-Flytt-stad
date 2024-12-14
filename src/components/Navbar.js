@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import logo from "../assets/images/logoAT.png"
 
 const Navbar = () => {
   useEffect(() => {
@@ -38,7 +39,7 @@ const Navbar = () => {
         {/* Logo */}
         <Link to="/" className="navbar-brand d-flex align-items-center">
           <img
-            src="/logoAT.png"
+            src={logo}
             alt="Logo"
             className="rounded-circle"
             style={{

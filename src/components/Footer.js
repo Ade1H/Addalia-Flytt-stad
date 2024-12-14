@@ -18,7 +18,9 @@ const Footer = () => {
             target="_blank"
             className="text-white mx-3"
             rel="noopener noreferrer"
-            style={{ transition: "transform 0.3s ease" }}
+            style={{
+              transition: "transform 0.3s ease",
+            }}
           >
             <i className="fab fa-facebook fa-2x"></i>
           </a>
@@ -27,7 +29,9 @@ const Footer = () => {
             target="_blank"
             className="text-white mx-3"
             rel="noopener noreferrer"
-            style={{ transition: "transform 0.3s ease" }}
+            style={{
+              transition: "transform 0.3s ease",
+            }}
           >
             <i className="fab fa-instagram fa-2x"></i>
           </a>
@@ -36,7 +40,9 @@ const Footer = () => {
             target="_blank"
             className="text-white mx-3"
             rel="noopener noreferrer"
-            style={{ transition: "transform 0.3s ease" }}
+            style={{
+              transition: "transform 0.3s ease",
+            }}
           >
             <i className="fab fa-tiktok fa-2x"></i>
           </a>
@@ -44,23 +50,41 @@ const Footer = () => {
 
         {/* Contact Information */}
         <div className="mb-3">
-          <p className="mb-2" style={{ fontSize: "1.2rem", fontWeight: "bold" }}>
+          <p
+            className="mb-2"
+            style={{ fontSize: "1.2rem", fontWeight: "bold" }}
+          >
             Telefon:{" "}
-            <a href="tel:+46701234567" className="text-white" style={{ textDecoration: "underline" }}>
+            <a
+              href="tel:+46728580598"
+              className="text-white"
+              style={{ textDecoration: "underline" }}
+            >
               +46 72-858 05 98
             </a>
           </p>
-          <p className="mb-2" style={{ fontSize: "1.2rem", fontWeight: "bold" }}>
+          <p
+            className="mb-2"
+            style={{ fontSize: "1.2rem", fontWeight: "bold" }}
+          >
             E-post:{" "}
-            <a href="mailto:addalia.service@gmail.com" className="text-white" style={{ textDecoration: "underline" }}>
+            <a
+              href="mailto:addalia.service@gmail.com"
+              className="text-white"
+              style={{ textDecoration: "underline" }}
+            >
               addalia.service@gmail.com
             </a>
           </p>
-          <p style={{ fontSize: "1.1rem" }}>Adress: Storängsgatan 2, 413 19 Göteborg</p>
+          <p style={{ fontSize: "1.1rem" }}>
+            Adress: Storängsgatan 2, 413 19 Göteborg
+          </p>
         </div>
 
         {/* Copyright */}
-       
+        <p className="mt-3" style={{ fontSize: "0.9rem" }}>
+          © {new Date().getFullYear()} Addalia. Alla rättigheter förbehållna.
+        </p>
       </div>
     </footer>
   );
