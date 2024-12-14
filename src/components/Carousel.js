@@ -11,7 +11,7 @@ const Carousel = () => {
         data-bs-ride="carousel"
         data-bs-interval="5000"
       >
-        <div className="carousel-indicators" >
+        <div className="carousel-indicators">
           {[...Array(3)].map((_, index) => (
             <button
               key={index}
@@ -27,9 +27,8 @@ const Carousel = () => {
 
         <div className="carousel-inner">
           {/* Slide 1 */}
-          <div className="carousel-item active" style={{height:'400px'}}>
-          {/* p-4 bg-gradient rounded-3 text-white text-center */}
-            <div className="d-flex align-items-center  justify-content-between p-4 bg-gradient rounded-3 text-white">
+          <div className="carousel-item active" style={{ height: "400px" }}>
+            <div className="d-flex align-items-center justify-content-between p-4 bg-gradient rounded-3 text-white">
               <div>
                 <h1 className="fw-bold mb-3">
                   Låt oss ta hand om städningen och flytten
@@ -46,102 +45,84 @@ const Carousel = () => {
           </div>
 
           {/* Slide 2 */}
-          <div className="carousel-item" style={{height:'400px'}} >
+          <div className="carousel-item" style={{ height: "400px" }}>
             <div className="p-4 bg-gradient rounded-3 text-white text-center">
               <h2 className="fw-bold mb-3">Våra Flyttjänster</h2>
-              <div
-  className="d-flex overflow-auto"
-  style={{
-    whiteSpace: "nowrap",
-    scrollBehavior: "smooth",
-    padding: "10px 0",
-  }}
->
-  {[
-    {
-      title: "Bohagsflytt",
-      text: "Flytta hela hemmet inklusive möbler.",
-      image: `${process.env.PUBLIC_URL}/storage.jpg`,
-    },
-    {
-      title: "Kontorsflytt",
-      text: "Flytta kontorsutrustning smidigt.",
-      image: `${process.env.PUBLIC_URL}/officeMove.jpg`,
-    },
-    {
-      title: "Akutflytt",
-      text: "Snabb hjälp vid nödsituationer.",
-      image: `${process.env.PUBLIC_URL}/man.jpg`,
-    },
-  ].map((item, index) => (
-    <div
-      key={index}
-      className="d-inline-block text-center mx-3"
-      style={{ width: "150px" }}
-    >
-      <img
-        src={item.image}
-        alt={item.title}
-        className="rounded-circle mb-2"
-        style={{ width: "150px", height: "150px" }}
-      />
-      <h4 className="fw-bold">{item.title}</h4>
-      <p className="mb-0">{item.text}</p>
-    </div>
-  ))}
-</div>
-
-
-
+              <div className="d-flex flex-row overflow-auto">
+                {[
+                  {
+                    title: "Bohagsflytt",
+                    text: "Flytta hela hemmet inklusive möbler.",
+                    image: `${process.env.PUBLIC_URL}/storage.jpg`,
+                  },
+                  {
+                    title: "Kontorsflytt",
+                    text: "Flytta kontorsutrustning smidigt.",
+                    image: `${process.env.PUBLIC_URL}/officeMove.jpg`,
+                  },
+                  {
+                    title: "Akutflytt",
+                    text: "Snabb hjälp vid nödsituationer.",
+                    image: `${process.env.PUBLIC_URL}/man.jpg`,
+                  },
+                ].map((item, index) => (
+                  <div
+                    key={index}
+                    className="text-center mx-2"
+                    style={{ minWidth: "150px" }}
+                  >
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="rounded-circle mb-2"
+                      style={{ width: "150px", height: "150px" }}
+                    />
+                    <h4 className="fw-bold">{item.title}</h4>
+                    <p>{item.text}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
           {/* Slide 3 */}
-          <div className="carousel-item" style={{height:'400px'}}>
+          <div className="carousel-item" style={{ height: "400px" }}>
             <div className="p-4 bg-gradient rounded-3 text-white text-center">
               <h2 className="fw-bold mb-3">Våra Städ- och Rengöringstjänster</h2>
-              <div
-  className="d-flex overflow-auto"
-  style={{
-    whiteSpace: "nowrap",
-    scrollBehavior: "smooth",
-    padding: "10px 0",
-  }}
->
-  {[
-    {
-      title: "Hemstädning",
-      text: "Regelbunden städning av hemmet.",
-      image: `${process.env.PUBLIC_URL}/hemstad.jpg`,
-    },
-    {
-      title: "Flyttstädning",
-      text: "Grundlig städning efter utflyttning.",
-      image: `${process.env.PUBLIC_URL}/bohagsflytt.jpg`,
-    },
-    {
-      title: "Storstädning",
-      text: "Omfattande städning för speciella tillfällen.",
-      image: `${process.env.PUBLIC_URL}/storstadning.jpg`,
-    },
-  ].map((item, index) => (
-    <div
-      key={index}
-      className="d-inline-block text-center mx-3"
-      style={{ width: "150px" }}
-    >
-      <img
-        src={item.image}
-        alt={item.title}
-        className="rounded-circle mb-2"
-        style={{ width: "150px", height: "150px" }}
-      />
-      <h4 className="fw-bold">{item.title}</h4>
-      <p className="mb-0">{item.text}</p>
-    </div>
-  ))}
-</div>
-
+              <div className="d-flex flex-row overflow-auto">
+                {[
+                  {
+                    title: "Hemstädning",
+                    text: "Regelbunden städning av hemmet.",
+                    image: `${process.env.PUBLIC_URL}/hemstad.jpg`,
+                  },
+                  {
+                    title: "Flyttstädning",
+                    text: "Grundlig städning efter utflyttning.",
+                    image: `${process.env.PUBLIC_URL}/bohagsflytt.jpg`,
+                  },
+                  {
+                    title: "Storstädning",
+                    text: "Omfattande städning för speciella tillfällen.",
+                    image: `${process.env.PUBLIC_URL}/storstadning.jpg`,
+                  },
+                ].map((item, index) => (
+                  <div
+                    key={index}
+                    className="text-center mx-2"
+                    style={{ minWidth: "150px" }}
+                  >
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="rounded-circle mb-2"
+                      style={{ width: "150px", height: "150px" }}
+                    />
+                    <h4 className="fw-bold">{item.title}</h4>
+                    <p>{item.text}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
