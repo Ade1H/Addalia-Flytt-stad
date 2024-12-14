@@ -81,10 +81,7 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Copyright */}
-        <p className="mt-3" style={{ fontSize: "0.9rem" }}>
-          © {new Date().getFullYear()} Addalia. Alla rättigheter förbehållna.
-        </p>
+      
       </div>
     </footer>
   );
