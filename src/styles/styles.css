@@ -1,81 +1,13 @@
-/* Glassmorphism Effect */
-.glass-effect {
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  padding: 20px;
-}
 
-/* Animated Gradient */
-.animated-gradient {
-  background: linear-gradient(270deg, #6c63ff, #00d4ff, #34e89e, #6c63ff);
-  background-size: 800% 800%;
-  animation: gradient-animation 8s ease infinite;
-}
 
-@keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
+@media (max-width: 576px) {
+  .offer-banner {
+    margin-top: 60px; /* Anpassa för mindre skärmar */
   }
 }
 
-/* Custom Arrows */
-.custom-arrow {
-  width: 50px;
-  height: 50px;
-  background: rgba(255, 255, 255, 0.5);
-  border: none;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.3s ease;
-}
-
-.custom-arrow:hover {
-  background: rgba(255, 255, 255, 0.8);
-  transform: scale(1.2);
-}
-
-/* Carousel Dots */
-.carousel-indicators button {
-  width: 12px;
-  height: 12px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 50%;
-  transition: background-color 0.3s ease;
-}
-
-.carousel-indicators button:hover,
-.carousel-indicators .active {
-  background-color: #00d4ff;
-}
-
-/* Glow Effect for Active Slide */
-.carousel-item.active {
-  border: 3px solid rgba(255, 255, 255, 0.8);
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
-}
-
-/* Fade-In Animation for Slides */
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
+@media (min-width: 577px) {
+  .offer-banner {
+    margin-top: 70px; /* Anpassa för större skärmar */
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.carousel-item {
-  animation: fade-in 1s ease-in-out;
 }

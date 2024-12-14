@@ -1,6 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useNavigate } from 'react-router-dom'; // För att navigera internt
+import { useNavigate } from 'react-router-dom';
+import '../styles/styles.css';
 
 const OfferBanner = () => {
   const navigate = useNavigate();
@@ -10,7 +11,7 @@ const OfferBanner = () => {
   };
 
   return (
-    <div className="container my-4">
+    <div className="container my-4 offer-banner">
       <div className="row align-items-center bg-warning text-dark rounded shadow p-4" style={{ marginBottom: '10px' }}>
         {/* Text Section */}
         <div className="col-12 col-md-8 text-center text-md-start mb-3 mb-md-0">
