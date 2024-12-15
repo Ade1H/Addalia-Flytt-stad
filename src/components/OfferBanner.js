@@ -17,7 +17,7 @@ const OfferBanner = () => {
         <div className="col-12 col-md-8 text-center text-md-start mb-3 mb-md-0">
           <h2 className="fw-bold">Specialerbjudande!</h2>
           <p className="lead">
-            Just nu erbjuder vi <strong>10% rabatt</strong> på flyttstädning. Boka innan
+            Just nu erbjuder vi <strong>20% rabatt</strong> på flyttstädning. Boka innan
             <strong> 31 december</strong> för att ta del av erbjudandet!
           </p>
         </div>

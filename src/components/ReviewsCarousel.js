@@ -1,81 +1,78 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
-const ElfsightWidget = () => {
+const GoogleReviewsCarousel = () => {
+  const [reviews, setReviews] = useState([]);
+  const API_KEY = "AIzaSyCwUy5-9FVVTkDafMyem6-YAP1l7Fs2xJ8"; // Replace with your Google API key
+  const PLACE_ID = "ChIJXdN3MVnzT0YRmGcW7ij__rQ"; // Replace with your place_id
+
   useEffect(() => {
-    const addScript = () => {
-      const script = document.createElement("script");
-      script.src = "https://static.elfsight.com/platform/platform.js";
-      script.async = true;
-      document.body.appendChild(script);
-
-      return () => {
-        if (document.body.contains(script)) {
-          document.body.removeChild(script);
-        }
-      };
+    const fetchReviews = async () => {
+      try {
+        const response = await axios.get(
+          `https://maps.googleapis.com/maps/api/place/details/json?place_id=${PLACE_ID}&fields=reviews&key=${API_KEY}`
+        );
+        setReviews(response.data.result.reviews || []);
+      } catch (error) {
+        console.error("Error fetching Google Reviews:", error);
+      }
     };
 
-    if (document.readyState === "complete") {
-      addScript();
-    } else {
-      window.addEventListener("load", addScript);
-    }
+    fetchReviews();
   }, []);
 
   return (
-    <div
-      style={{
-        width: "100%",
-        height: "500px",
-        // background: "linear-gradient(135deg, #e0f7fa, #80deea)",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        borderRadius: "15px",
-        boxShadow: "0 6px 15px rgba(0, 0, 0, 0.15)",
-        padding: "20px",
-        position: "relative",
-        overflow: "hidden",
-      }}
-    >
-      {/* Placeholder while the widget loads */}
-      <div
-        style={{
-          position: "absolute",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-          fontSize: "1.5rem",
-          fontWeight: "bold",
-          color: "#00796b",
-          textAlign: "center",
-          zIndex: 1,
-          animation: "fade-in 1.5s infinite",
-        }}
-      >
-       
-      </div>
-
-      {/* Elfsight Widget */}
-      <div
-        className="elfsight-app-43ac02d9-7f57-49a5-9f96-232df9e3fbed"
-        style={{
-          width: "100%",
-          height: "100%",
-          zIndex: 2,
-        }}
-      ></div>
-
-      {/* Custom CSS for animation */}
-      <style>{`
-        @keyframes fade-in {
-          0% { opacity: 0.5; }
-          50% { opacity: 1; }
-          100% { opacity: 0.5; }
-        }
-      `}</style>
+    <div className="container mt-5">
+      <h2 className="text-center mb-4">Google Reviews</h2>
+      {reviews.length === 0 ? (
+        <p className="text-center">Loading reviews...</p>
+      ) : (
+        <div id="googleReviewsCarousel" className="carousel slide" data-bs-ride="carousel">
+          <div className="carousel-inner">
+            {reviews.map((review, index) => (
+              <div
+                key={review.author_name}
+                className={`carousel-item ${index === 0 ? "active" : ""}`}
+              >
+                <div className="d-flex justify-content-center">
+                  <div className="card" style={{ maxWidth: "600px" }}>
+                    <div className="card-body">
+                      <h5 className="card-title text-center">{review.author_name}</h5>
+                      <p className="text-center">
+                        {"⭐".repeat(review.rating)}
+                      </p>
+                      <p className="card-text text-center">{review.text}</p>
+                      <p className="text-center text-muted">
+                        {new Date(review.time * 1000).toLocaleDateString()}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <button
+            className="carousel-control-prev"
+            type="button"
+            data-bs-target="#googleReviewsCarousel"
+            data-bs-slide="prev"
+          >
+            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span className="visually-hidden">Previous</span>
+          </button>
+          <button
+            className="carousel-control-next"
+            type="button"
+            data-bs-target="#googleReviewsCarousel"
+            data-bs-slide="next"
+          >
+            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+            <span className="visually-hidden">Next</span>
+          </button>
+        </div>
+      )}
     </div>
   );
 };
 
-export default ElfsightWidget;
+export default GoogleReviewsCarousel;
