@@ -91,9 +91,9 @@ const QuoteRequest = () => {
             color: "#004085",
             borderColor: "#004085"
           }}
-          aria-label="Call us at 072-858 05 98"
+          aria-label="Call us at 0102008184"
         >
-          <i className="bi bi-telephone-fill me-2"></i> 072-858 05 98
+          <i className="bi bi-telephone-fill me-2"></i> 0102008184
         </a>
       </div>
 

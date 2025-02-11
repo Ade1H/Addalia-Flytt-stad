@@ -60,7 +60,7 @@ const Footer = () => {
               className="text-white"
               style={{ textDecoration: "underline" }}
             >
-              +46 72-858 05 98
+              +46 102008184
             </a>
           </p>
           <p
@@ -81,7 +81,7 @@ const Footer = () => {
           </p>
         </div>
 
-      
+
       </div>
     </footer>
   );
